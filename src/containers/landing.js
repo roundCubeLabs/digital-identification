@@ -11,6 +11,7 @@ import {
 // import Modal from "react-native-modal";
 import Block from "../components/block";
 import { Button, Icon } from "native-base";
+import { Actions } from "react-native-router-flux";
 
 export default class HomeScreen extends Component {
     constructor(props) {
@@ -100,7 +101,7 @@ export default class HomeScreen extends Component {
                         title="Submit"
                         block
                         primary
-                        onPress={()=>{}}
+                        onPress={()=>{ Actions.scanner()}}
                     >
                         <Icon
                             type="Entypo"
