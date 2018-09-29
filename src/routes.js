@@ -2,7 +2,7 @@
 
 import React, { Component } from "react";
 import { Router, Scene, Actions, ActionConst } from "react-native-router-flux";
-import "./config/fbConfig.js";
+// import "./config/fbConfig.js";
 
 import { Provider } from "react-redux";
 import { store } from "./store/store";
