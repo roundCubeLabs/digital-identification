@@ -1,24 +1,22 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
-import React, { Component } from 'react';
-import { Platform, StyleSheet, ImageBackground, View, Button, Image, Text } from 'react-native';
-import SplashScreen from './components/SplashScreen';
-import HomeScreen from './components/HomeScreen';
-const appName = "App Name Here";
-
-export default class App extends Component {
+import React, {PureComponent} from "react";
+import { View, StatusBar } from "react-native";
+import Routes from "./src/routes.js";
+import SplashScreen from "react-native-splash-screen"
+require('core-js/es6/array')
 
 
-
-  render() {
-    return (
-      <HomeScreen />
-    );
-  }
+export default class App extends PureComponent {
+    
+    componentDidMount(){
+        SplashScreen.hide();
+    }
+    render(){
+        return (
+            <View style={{ flex: 1, backgroundColor: "#7f0aa3" }}>
+                <StatusBar backgroundColor="#7f0aa3" barStyle="light-content" />
+                <Routes />
+            </View>
+        );
+    }
 }
+

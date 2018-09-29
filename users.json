@@ -1,0 +1,15 @@
+{"users": [
+{
+  "localId": "PnT4swMM8nbq6cWTqhdSX2RdLLF3",
+  "email": "tiago@gmail.com",
+  "emailVerified": true,
+  "passwordHash": "Wg9vF6OyiHXNKxSBMRjnaoAR+qWUb6ZasN0ufOmMo/HRZ4zo9lzrhU23yrsDVkzXEnBgdQRUN5/ymxA2/yYs+w==",
+  "salt": "LcPwim81aIDgUA==",
+  "displayName": "Tiago BC",
+  "photoUrl": "https://pbs.twimg.com/profile_images/924275680434642949/3603VEZT_400x400.jpg",
+  "lastSignedInAt": "1521484439000",
+  "createdAt": "1521469153000",
+  "providerUserInfo": []
+}]
+
+}
