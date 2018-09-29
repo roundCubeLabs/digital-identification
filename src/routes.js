@@ -51,6 +51,15 @@ export default class Routes extends Component {
                                     hideNavBar={true}
                                     initial
                                 />
+                                
+                                <Scene
+                                    type={ActionConst.REPLACE}
+                                    key="scanner"
+                                    title="Scanner"
+                                    component={Landing}
+                                    hideNavBar={true}
+                                    initial
+                                />
 
                             </Scene>
                         </Scene>
