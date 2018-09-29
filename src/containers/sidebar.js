@@ -13,7 +13,7 @@ class SideBar extends Component {
     constructor(props) {
         super(props);
         // Actions.drawerOpen();
-        this.props.isLoggedIn(this.props.username);
+        // this.props.isLoggedIn(this.props.username);
     }
     goTo = (route, go) => {
         if (Actions.prevScene == route) {

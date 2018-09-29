@@ -10,23 +10,12 @@ import { store } from "./store/store";
 import { Login, Landing, SideBar } from "./containers";
 
 import {
-    UpdatePass,
-    Order,
-    OrderLedger,
-    PreviewReceipt,
-    OrderSubmit,
-    Deposit,
-    DepositAdd,
-    Reports,
-    OrdersListContainer,
-    DetailedReportContainer
+    UpdatePass
 } from "./components";
 
 export default class Routes extends Component {
     onBackPress = () => {
-        Actions.currentParams.title === "OrderReceipt" ?
-            Actions.reset("dashboard") :
-            Actions.pop();
+        Actions.pop();
         return true;
     };
 
@@ -40,7 +29,7 @@ export default class Routes extends Component {
                             component={Login}
                             hideNavBar={true}
                             type={ActionConst.RESET}
-                            initial
+                            
                         />
 
                         <Scene
@@ -51,6 +40,7 @@ export default class Routes extends Component {
                             drawerPosition="left"
                             tapToClose={true}
                             hideNavBar={true}
+                            initial
                         >
                             <Scene key="main">
                                 <Scene
@@ -61,73 +51,7 @@ export default class Routes extends Component {
                                     hideNavBar={true}
                                     initial
                                 />
-                                <Scene
-                                    key="updatepass"
-                                    title="Update Password"
-                                    component={UpdatePass}
-                                    hideNavBar={true}
-                                />
 
-                                <Scene
-                                    key="order"
-                                    title="Order"
-                                    component={Order}
-                                    hideNavBar={true}
-                                />
-
-                                <Scene
-                                    key="productlist"
-                                    title="Products"
-                                    component={OrderLedger}
-                                    hideNavBar={true}
-                                />
-
-                                <Scene
-                                    key="orderSubmit"
-                                    title="Confirm Order"
-                                    component={OrderSubmit}
-                                    hideNavBar={true}
-                                />
-
-                                <Scene
-                                    key="previewreceipt"
-                                    title="OrderReceipt"
-                                    component={PreviewReceipt}
-                                    hideNavBar={true}
-                                />
-
-                                <Scene
-                                    key="deposit"
-                                    title="Deposit"
-                                    component={Deposit}
-                                    hideNavBar={true}
-                                />
-
-                                <Scene
-                                    key="depositadd"
-                                    title="Deposit"
-                                    component={DepositAdd}
-                                    hideNavBar={true}
-                                />
-
-                                <Scene
-                                    key="reports"
-                                    title="Report"
-                                    component={Reports}
-                                    hideNavBar={true}
-                                />
-                                <Scene
-                                    key="orderlist"
-                                    title="Report"
-                                    component={OrdersListContainer}
-                                    hideNavBar={true}
-                                />
-                                <Scene
-                                    key="detailedReport"
-                                    title="Details"
-                                    component={DetailedReportContainer}
-                                    hideNavBar={true}
-                                />
                             </Scene>
                         </Scene>
                     </Scene>

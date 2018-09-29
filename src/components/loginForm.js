@@ -10,13 +10,14 @@ import {
 import appStyle from "../assets/style";
 import ValidationComponent from "react-native-form-validator";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import { Actions } from "react-native-router-flux";
 
 export default class LoginForm extends ValidationComponent {
     constructor(props) {
         super(props);
         this.state = {
-            username: "",
-            password: "",
+            username: "zm@gmail.com",
+            password: "123123123",
             height: 0,
             shouldDisableButton: false,
             error: false
@@ -29,10 +30,7 @@ export default class LoginForm extends ValidationComponent {
                 password: { required: true }
             })
         ) {
-            this.props.Login({
-                username: this.state.username,
-                password: this.state.password
-            });
+            Actions.dashboard();
         } else {
             Alert.alert("Error", "Enter Username and Password");
             this.setState({ error: true });
